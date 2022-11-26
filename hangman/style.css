@@ -1,0 +1,178 @@
+:root {
+    --tenpixel: 11px;
+    --hundredpixel: calc(var(--tenpixel) * 10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
+}
+
+.hang-man {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: calc(var(--hundredpixel) * 2.5);
+}
+
+.hang-man * {
+    background-color: black;
+    position: absolute;
+}
+
+.base {
+    display: none;
+    height: var(--tenpixel);
+    width: var(--hundredpixel);
+    left: calc(var(--hundredpixel) * -1);
+}
+
+.post {
+    display: none;
+    width: var(--tenpixel);
+    height: calc(var(--hundredpixel) * 2);
+    top: calc(var(--hundredpixel) * -2);
+    left: calc((var(--hundredpixel) + var(--tenpixel)) / -2);
+}
+
+.gallows {
+    display: none;
+    height: var(--tenpixel);
+    width: calc(var(--hundredpixel) * 1.2);
+    top: calc(var(--hundredpixel) * -2);
+    left: calc((var(--hundredpixel) + var(--tenpixel)) / -2);
+}
+
+.rope {
+    display: none;
+    width: var(--tenpixel);
+    height: calc(var(--hundredpixel) / 3);
+    top: calc(var(--hundredpixel) * -2);
+    left: calc((var(--hundredpixel) + var(--tenpixel)) / 2)
+}
+
+.head {
+    width: calc(var(--tenpixel) * 5);
+    height: calc(var(--tenpixel) * 5);
+    background-color: rgba(0, 0, 0, 0);
+    border: var(--tenpixel) solid black;
+    border-radius: 50%;
+    top: calc(var(--hundredpixel) * -5 / 3 - 1px);
+    left: calc(var(--hundredpixel) / 2 + var(--tenpixel) * -3 / 2);
+    display: none;
+}
+
+.torso {
+    display: none;
+    width: var(--tenpixel);
+    height: calc(var(--hundredpixel) * 5/6);
+    left: calc((var(--hundredpixel) + var(--tenpixel)) / 2);
+    top: calc((var(--hundredpixel) * -5 / 4 - 1px))
+}
+
+.arm {
+    display: none;
+    height: calc(var(--hundredpixel) / 2);
+    width: var(--tenpixel);
+    top: calc(var(--hundredpixel) * -6/5);
+}
+
+.leg {
+    display: none;
+    height: calc(var(--hundredpixel) / 2);
+    width: var(--tenpixel);
+    top: calc(var(--hundredpixel) * -3/5);
+}
+
+.right {
+    transform: rotate(-60deg);
+    right: calc(var(--hundredpixel) * -7/8);
+}
+
+.left {
+    left: calc(var(--hundredpixel) * 1/3);
+    transform: rotate(60deg);
+}
+
+.guessing-word {
+    display: flex;
+    margin: 4rem;
+}
+
+.guessing-word * {
+    user-select: none;
+    padding: .1rem 1.5rem;
+    font-family: monospace;
+    margin-right: 2rem;
+    font-size: 4rem;
+    border-bottom: 0.5rem solid black;
+    text-transform: uppercase;
+    color: white;
+}
+
+.guessing-word h1:last-child {
+    margin-right: 0;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(13, 1fr);
+    margin-bottom: 3rem;
+}
+
+.keyboard>* {
+    font-family: monospace;
+    padding: 0.5em 1em;
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.kill-screen {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 2em;
+    border: .5em solid black;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.kill-screen h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+}
+
+.kill-screen h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+}
+
+.kill-screen button {
+    font-size: 2.5rem;
+    padding: .4em .8em;
+}
