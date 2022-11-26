@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game {
+    width: 630px;
+    height: 630px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.square {
+    border: .5rem solid black;
+    border-radius: 0;
+    font-size: 8em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.left {
+    border-left: 0;
+}
+
+.right {
+    border-right: 0;
+}
+
+.top {
+    border-top: 0;
+}
+
+.bottom {
+    border-bottom: 0;
+}
+
+.square:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+.square:active {
+    background-color: lightgray;
+}
+
+.square:disabled {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.beginning {
+    display: flex;
+}
+
+.container {
+    border: 10px solid black;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.beginning h1 {
+    font-family: monospace;
+    font-size: 4rem;
+}
+
+.beginning button {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.15em 0.5em;
+    margin: 2rem 2rem;
+    font-size: 4rem;
+}
+
+.end,
+.beginning {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.end {
+    display: none
+}
+
+.kill-screen {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 40rem;
+    height: 20rem;
+    border: 10px solid black;
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+.kill-screen h1 {
+    font-family: monospace;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.kill-screen button {
+    padding: .4em .8em;
+    font-size: 40px;
+}
