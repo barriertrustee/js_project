@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: monospace;
+}
+
+.board {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    border: 2px solid black;
+}
+
+.board button {
+    /* border: 1px solid black; */
+    border: 0;
+    background-color: hsl(0, 0%, 100%);
+    aspect-ratio: 1 /1;
+}
+
+.board button:hover {
+    background-color: hsl(0, 0%, 89%);
+}
+
+.board button:disabled:hover {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.control-board {
+    background-color: hsl(0, 0%, 100%);
+    border: 2px solid black;
+    border-top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stop,
+.stop:disabled {
+    color: red;
+}
+
+.next {
+    color: black;
+}
+
+.play,
+.play:disabled {
+    color: green;
+}
+
+.reset,
+.reset:disabled {
+    color: blue;
+}
+
+.control-board button {
+    border: 2px solid black;
+    font-size: 2.5rem;
+    width: 1.5em;
+    aspect-ratio: 1/ 1;
+    font-weight: 900;
+}
+
+.control-board button:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.control-board button:active {
+    background-color: rgb(235, 235, 235);
+}
+
+.control-board button:disabled {
+    background-color: rgb(255, 255, 255);
+}
+
+.control-board button:disabled:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.control-board button:disabled:active {
+    background-color: rgb(255, 255, 255);
+}
