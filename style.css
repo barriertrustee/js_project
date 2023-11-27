@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: 1.75rem;
+}
+
+nav * {
+    color: white;
+}
+
+nav>h1 {
+    text-decoration: underline;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+
+}
+
+nav li {
+    color: white;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5rem solid black;
+}
+
+nav li:hover {
+    border-bottom: 0.5rem solid white;
+}
+
+li a {
+    text-decoration: none;
+}
